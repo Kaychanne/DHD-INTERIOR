@@ -1,18 +1,11 @@
 <?php
 
-// 1. Daftarkan file autoload dari Composer agar semua library terbaca
-require __DIR__ . '/../public/index.php';
+define('LARAVEL_START', microtime(true));
 
-// 2. Jalankan bootstrap aplikasi Laravel
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+require __DIR__.'/../vendor/autoload.php';
 
-// 3. Tangani request yang masuk melalui Kernel Laravel dan kirim responsenya ke Vercel
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+$app = require __DIR__.'/../bootstrap/app.php';
 
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
+$app->handleRequest(
+    Illuminate\Http\Request::capture()
 );
-
-$response->send();
-
-$kernel->terminate($request, $response);
