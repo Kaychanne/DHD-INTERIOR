@@ -1,0 +1,473 @@
+/* --- RESET CSS DASAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #ddd;
+}
+
+
+
+.services-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: -50px auto 50px auto; 
+    padding: 0 20px;
+    position: relative;
+    z-index: 10; 
+}
+
+
+.services-wrapper {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    overflow: hidden; 
+}
+
+
+.service-box {
+    flex: 1; 
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    border-right: 1px solid #eaeaea; 
+}
+
+
+.service-box:last-child {
+    border-right: none;
+}
+
+
+.service-box:hover {
+    background-color: #fcfcfc;
+}
+
+
+.box-icon {
+    font-size: 40px; 
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.box-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.box-desc {
+    font-size: 0.88rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        margin-top: 20px;
+    }
+    .services-wrapper {
+        flex-direction: column;
+        border-radius: 8px;
+    }
+    .service-box {
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .service-box:last-child {
+        border-bottom: none;
+    }
+}
+
+/* --- LAYOUT UMUM DUA KOLOM SPARK --- */
+.split-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* --- 1. STYLING WHY CHOOSE US (GELAP) --- */
+.why-choose-us-split {
+    background-color: #ececec;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.wcu-left-content {
+    flex: 1.2; /* Mengambil ruang sedikit lebih besar untuk teks */
+}
+
+.wcu-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.wcu-points-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wcu-point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Lingkaran Ikon Persis Gambar */
+.wcu-circle-icon {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle, #dba800 0%,#dba800 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(180, 180, 180, 0.3);
+}
+
+.wcu-point-text h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color:#dba800;
+}
+
+.wcu-point-text p {
+    font-size: 0.9rem;
+    color: #535353;
+    line-height: 1.6;
+}
+
+.wcu-right-image {
+    flex: 1;
+}
+
+.wcu-right-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* --- 2. STYLING ABOUT US (TERANG) --- */
+.about-us-split {
+    background-color: #f8f9fa;
+    color: #000000;
+    padding: 100px 20px;
+}
+
+.about-left-content {
+    flex: 1.2;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.about-p-main {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.about-p-sub {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.about-right-image {
+    flex: 1;
+}
+
+.about-right-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- RESPONSIVE UNTUK LAYAR HP --- */
+@media (max-width: 992px) {
+    .split-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .wcu-right-image, .about-right-image {
+        width: 100%;
+    }
+    .wcu-right-image img, .about-right-image img {
+        height: 350px;
+    }
+}
+
+/* --- STYLING MAIN FOOTER --- */
+.main-footer {
+    background-color: #0b0f19; /* Warna lebih gelap dari Why Choose Us agar berdimensi */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Kolom Profil */
+.footer-about .footer-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-about .footer-logo span {
+    color: #e2a020; /* Sentuhan warna emas estetik */
+}
+
+.footer-about p {
+    color: #a0aec0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footer-socials a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.footer-socials a:hover {
+    background-color: #e2a020;
+}
+
+/* Kolom Judul Kecil */
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2026; 
+    height: 2px;
+    background-color: #e2a020;
+}
+
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e2a020;
+    padding-left: 5px; 
+    transition: all 0.3s ease;
+}
+
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    color: #a0aec0;
+}
+
+.footer-contact li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
